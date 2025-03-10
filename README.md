@@ -5,6 +5,7 @@ $filePath = "C:\Users\用户名\AppData\Local\Google\Chrome\User Data\Default\Pr
 
 修改ps文件中的目录名和用户名
 
+![image](https://github.com/user-attachments/assets/6e73332b-63a8-4737-b54b-8d70ebcacb26)
 
 ![image](https://github.com/user-attachments/assets/8f90bf15-8c0a-4636-bca0-310c287f054a)
 
