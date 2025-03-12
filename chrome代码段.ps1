@@ -1,5 +1,5 @@
-﻿# 目标目录
-$saveDir = "D:\chrome代码段"
+# 目标目录
+$saveDir = "d:\chrome代码段"
 # 文件路径
 $filePath = "C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default\Preferences"
 
@@ -46,7 +46,11 @@ try {
     foreach ($snippet in $scriptSnippets) {
         # 获取代码段名称和内容
         $name = $snippet.name
-        $content = [System.Text.RegularExpressions.Regex]::Unescape($snippet.content)
+		
+		$jsonString = $snippet.content -replace '\\d', '\\d'
+        $content = [System.Text.RegularExpressions.Regex]::Unescape($jsonString)
+		
+
 
         # 构建保存路径
         $savePath = Join-Path -Path $saveDir -ChildPath "$name.js"
@@ -60,3 +64,4 @@ try {
 catch {
     Write-Output "无法将 JSON 片段转换为对象: $_"
 }
+pause
