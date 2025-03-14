@@ -47,7 +47,8 @@ try {
         # 获取代码段名称和内容
         $name = $snippet.name
 		
-		$jsonString = $snippet.content -replace '\\d', '\\d'
+	$jsonString = $snippet.content -replace '\\d', '\\d'
+  	$jsonString = $jsonString -replace '\\n', '\\n'
         $content = [System.Text.RegularExpressions.Regex]::Unescape($jsonString)
 		
 
