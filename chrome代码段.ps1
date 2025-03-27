@@ -49,6 +49,8 @@ try {
 		
 	$jsonString = $snippet.content -replace '\\d', '\\d'
   	$jsonString = $jsonString -replace '\\n', '\\n'
+   	$jsonString = $jsonString -replace '\\s', '\\s'
+    
         $content = [System.Text.RegularExpressions.Regex]::Unescape($jsonString)
 		
 
